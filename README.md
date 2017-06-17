@@ -33,3 +33,5 @@ optional arguments:
 Typical command line calls might look like:
 
 `python peacock.py <inputimage>`
+
+![Example of Protanopic (red-blind) vision.](readme_images/example_protanopia.png)
