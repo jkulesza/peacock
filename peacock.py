@@ -221,7 +221,8 @@ if(__name__ == '__main__' and hasattr(main, '__file__')):
     The conversion processes and coefficients herein are used with permission
     from Colblindor [http://www.color-blindness.com/] and were therein used with
     permission of Matthew Wickline and the Human-Computer Interaction Resource
-    Network [http://www.hcirn.com/] for non-commercial purposes.
+    Network [http://www.hcirn.com/] for non-commercial purposes.  As such, this
+    code may only be used for non-commercial purposes.
     """)
 
     epilog = textwrap.dedent(
