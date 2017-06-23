@@ -199,7 +199,7 @@ if(__name__ == '__main__' and hasattr(main, '__file__')):
         'Normal': '(normal vision)',
         'Protanopia': '(red-blind)',
         'Deuteranopia': '(green-blind)',
-        'Tritanpoia': '(blue-blind)',
+        'Tritanopia': '(blue-blind)',
         'Protanomaly': '(red-weak)',
         'Deuteranomaly': '(green-weak)',
         'Tritanomaly': '(blue-weak)',
