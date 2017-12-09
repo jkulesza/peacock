@@ -104,7 +104,7 @@ class ColorBlindConverter(object):
                 sy = cy
                 sz = (1 - (du + dv)) * cy / dv
 
-                # xzy->rgb
+                # xyz->rgb
                 sr =  (3.063218 * sx - 1.393325 * sy - 0.475802 * sz)
                 sg = (-0.969243 * sx + 1.875966 * sy + 0.041555 * sz)
                 sb =  (0.067871 * sx - 0.228834 * sy + 1.069251 * sz)
@@ -112,7 +112,7 @@ class ColorBlindConverter(object):
                 dx = nx - sx
                 dz = nz - sz
 
-                # xzy->rgb
+                # xyz->rgb
 
                 dr =  (3.063218 * dx - 1.393325 * dy - 0.475802 * dz)
                 dg = (-0.969243 * dx + 1.875966 * dy + 0.041555 * dz)
