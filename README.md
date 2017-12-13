@@ -36,6 +36,10 @@ cited on
 |                 **Other**                      |                        |                          |
 |     Monochromacy (total color blindness)       |          rare          |           rare           |
 
+Despite being quite rare, simulating monochromacy was included because it can also
+be used to evaluate the suitability of an image to display well when printed 
+without color.
+
 # Why are there Python and C++ verions?
 
 The Python version (Peacock as `peacock.py`) came first as a proof of concept.
