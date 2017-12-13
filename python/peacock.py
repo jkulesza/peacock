@@ -39,8 +39,7 @@ class ColorBlindConverter(object):
               self.cb_type == 'Tritanomaly'):
             self._convert_colorblind()
             self._convert_anomylize()
-        elif( self.cb_type == 'Achromatopsia' or
-              self.cb_type == 'Monochrome'):
+        elif( self.cb_type == 'Monochromacy'):
             self._convert_monochrome()
         self.suffix = self.cb_type
         return
@@ -104,7 +103,7 @@ class ColorBlindConverter(object):
                 sy = cy
                 sz = (1 - (du + dv)) * cy / dv
 
-                # xzy->rgb
+                # xyz->rgb
                 sr =  (3.063218 * sx - 1.393325 * sy - 0.475802 * sz)
                 sg = (-0.969243 * sx + 1.875966 * sy + 0.041555 * sz)
                 sb =  (0.067871 * sx - 0.228834 * sy + 1.069251 * sz)
@@ -112,7 +111,7 @@ class ColorBlindConverter(object):
                 dx = nx - sx
                 dz = nz - sz
 
-                # xzy->rgb
+                # xyz->rgb
 
                 dr =  (3.063218 * dx - 1.393325 * dy - 0.475802 * dz)
                 dg = (-0.969243 * dx + 1.875966 * dy + 0.041555 * dz)
@@ -203,7 +202,7 @@ if(__name__ == '__main__' and hasattr(main, '__file__')):
         'Protanomaly': '(red-weak)',
         'Deuteranomaly': '(green-weak)',
         'Tritanomaly': '(blue-weak)',
-        'Achromatopsia': '(totally colorblind)'
+        'Monochromacy': '(totally colorblind)'
     }
     description = textwrap.dedent(
     """
@@ -260,7 +259,7 @@ if(__name__ == '__main__' and hasattr(main, '__file__')):
     if(args.cb == 'All'):
         image.convert('Normal')
         image.writeImage()
-        image.convert('Achromatopsia')
+        image.convert('Monochromacy')
         image.writeImage()
         image.convert('Protanopia')
         image.writeImage()

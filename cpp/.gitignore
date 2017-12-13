@@ -1,0 +1,5 @@
+build
+**/*.dSYM
+peacock
+peacock_debug
+peacock_release
