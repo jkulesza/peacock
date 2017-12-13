@@ -53,7 +53,7 @@ void CB_Converter::convert( std::string & cbtype ) {
   if( !cbtype.compare( "All" ) ) {
     std::cout << "Performing conversion to ALL representations of colorblindness..." << std::endl;
     std::vector< std::string > convert_list =
-      { "Normal", "Achromatopsia",
+      { "Normal", "Monochromacy",
       "Protanopia", "Deuteranopia", "Tritanopia",
       "Protanomaly", "Deuteranomaly", "Tritanomaly" } ;
     for( auto & it: convert_list ){
@@ -75,8 +75,7 @@ void CB_Converter::convert( std::string & cbtype ) {
       convert_colorblind( cbtype );
       convert_anomylize();
     }
-    else if( !cbtype.compare( "Achromatopsia" ) ||
-             !cbtype.compare( "Monochrome" ) ) {
+    else if( !cbtype.compare( "Monochromacy" ) ) {
       convert_monochrome();
     } else {
       std::cerr << "Unrecognized type of colorblindness: " << cbtype << ", exiting." << std::endl;
@@ -199,8 +198,7 @@ void CB_Converter::convert_anomylize( ) {
   return;
 }
 
-// Converts an image to represent *total* colorblindness (Achromatopsia) or a
-// black and white print out (monochrome).
+// Converts an image to represent *total* colorblindness (monochromacy).
 void CB_Converter::convert_monochrome( ) {
 
   image = image_orig;

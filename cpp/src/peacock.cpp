@@ -28,13 +28,13 @@ int main( int argc, char **argv ) {
     " - Protanomaly (red-weak)\n"
     " - Deuteranomaly (green-weak)\n"
     " - Tritanomaly (blue-weak)\n"
-    " - Achromatopsia (totally colorblind)\n"
+    " - Monochromacy (totally colorblind)\n"
     "\b\n"
   );
   args::HelpFlag help(parser, "help", "Display this help menu", {'h', "help"});
   args::Group arguments("arguments");
   args::ValueFlag<std::string> cbtype(parser, "CBTYPE", "The type of colorblindness, see below for valid entries (if not used: all)", {'c', "colorblindness"});
-  args::Positional<std::string> infilename(parser, "infilename", "The path to the image to be processed.");
+  args::Positional<std::string> infilename(parser, "inputimage", "The path to the image to be processed.");
 
   // Parse command line arguments.
   try {

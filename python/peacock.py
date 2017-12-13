@@ -39,8 +39,7 @@ class ColorBlindConverter(object):
               self.cb_type == 'Tritanomaly'):
             self._convert_colorblind()
             self._convert_anomylize()
-        elif( self.cb_type == 'Achromatopsia' or
-              self.cb_type == 'Monochrome'):
+        elif( self.cb_type == 'Monochromacy'):
             self._convert_monochrome()
         self.suffix = self.cb_type
         return
@@ -203,7 +202,7 @@ if(__name__ == '__main__' and hasattr(main, '__file__')):
         'Protanomaly': '(red-weak)',
         'Deuteranomaly': '(green-weak)',
         'Tritanomaly': '(blue-weak)',
-        'Achromatopsia': '(totally colorblind)'
+        'Monochromacy': '(totally colorblind)'
     }
     description = textwrap.dedent(
     """
@@ -260,7 +259,7 @@ if(__name__ == '__main__' and hasattr(main, '__file__')):
     if(args.cb == 'All'):
         image.convert('Normal')
         image.writeImage()
-        image.convert('Achromatopsia')
+        image.convert('Monochromacy')
         image.writeImage()
         image.convert('Protanopia')
         image.writeImage()
