@@ -78,7 +78,7 @@ may only be used for non-commercial purposes.
 
 [Original (Normal)
 image](https://commons.wikimedia.org/wiki/File:Crayola_24pack_2005.jpg) above
-obtained at the linked URL and is used under the under the Creative Commons
+obtained at the linked URL and is used under the Creative Commons
 Attribution-Share Alike 3.0 Unported license.
 
 Peacock++ uses the `args.hxx` header-only C++ command line option parser for
