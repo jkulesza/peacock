@@ -205,6 +205,11 @@ void CB_Converter::convert_monochrome( ) {
 
   image.modifyImage();
 
+  // Point to encoder's bit depth
+  image.defineValue("png", "bit-depth", "8");
+  // Point to encoder's color-space type.
+  image.defineValue("png", "color-type", "6");
+
   // Ensure that there is only one reference to underlying image. If this is not
   // done, then image pixels will not be modified.
   Magick::Pixels view( image );
