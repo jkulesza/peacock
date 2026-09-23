@@ -7,6 +7,8 @@
 
 #include "CB_Converter.hpp"
 
+using Magick::Quantum;
+
 const float CB_Converter::conversion_coeffs[3][4] = {
   {0.753,  0.265, 1.273463, -0.073894},
   {1.140, -0.140, 0.968437,  0.003331},
